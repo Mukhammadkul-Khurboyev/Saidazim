@@ -1,0 +1,666 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MangaUZ — O'zbekistondagi №1 Manga Do'koni</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Nunito:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- LOADER -->
+    <div class="loader" id="loader">
+      <div class="loader-inner">
+        <span>M</span><span>A</span><span>N</span><span>G</span><span>A</span
+        ><span>U</span><span>Z</span>
+      </div>
+      <div class="loader-bar">
+        <div class="loader-fill"></div>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+      <div class="nav-logo">
+        <span class="logo-jp">マンガ</span><span class="logo-uz">MangaUZ</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#home" class="nav-link active" data-page="home">Bosh sahifa</a>
+        <a href="#about" class="nav-link" data-page="about">Biz haqimizda</a>
+        <a href="#catalog" class="nav-link" data-page="catalog">Katalog</a>
+        <a href="#store" class="nav-link" data-page="store">Do'kon</a>
+        <a href="#contact" class="nav-link" data-page="contact">Aloqa</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn-cart" id="cartBtn">
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="9" cy="21" r="1" />
+            <circle cx="20" cy="21" r="1" />
+            <path
+              d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+            />
+          </svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="btn-menu" id="menuBtn">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home">Bosh sahifa</a><a href="#about">Biz haqimizda</a>
+      <a href="#catalog">Katalog</a><a href="#store">Do'kon</a
+      ><a href="#contact">Aloqa</a>
+    </div>
+
+    <!-- PAGE 1: HERO -->
+    <section class="page" id="home">
+      <div class="hc hc1"></div>
+      <div class="hc hc2"></div>
+      <div class="hc hc3"></div>
+      <div class="hero-dots"></div>
+      <div class="hero-content">
+        <div class="hero-badge reveal">🔥 O'zbekistonda №1 Manga Do'koni</div>
+        <h1 class="hero-title reveal">
+          Manga olamiga<br /><span class="highlight">xush kelibsiz!</span>
+        </h1>
+        <p class="hero-sub reveal">
+          500+ sarlavha · O'zbek tilida · 24 soat yetkazib berish
+        </p>
+        <div class="hero-btns reveal">
+          <a href="#store" class="btn-primary">🛒 Do'konni ko'rish</a>
+          <a href="#catalog" class="btn-outline">📚 Katalog</a>
+        </div>
+        <div class="hero-stats reveal">
+          <div class="stat">
+            <span class="stat-num" data-target="500">0</span>+
+            <p>Sarlavha</p>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-target="15000">0</span>+
+            <p>Xaridor</p>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-target="99">0</span>%
+            <p>Mamnun</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="manga-stack">
+          <div class="manga-card mc1 reveal">
+            <div
+              class="manga-cover"
+              style="background: linear-gradient(135deg, #ff6b35, #f7931e)"
+            >
+              <div class="mc-deco">⚓</div>
+              <div class="mc-title">ONE PIECE</div>
+              <div class="mc-vol">Vol. 106</div>
+            </div>
+          </div>
+          <div class="manga-card mc2 reveal">
+            <div
+              class="manga-cover"
+              style="background: linear-gradient(135deg, #1a1a2e, #3a3a7e)"
+            >
+              <div class="mc-deco">🌀</div>
+              <div class="mc-title">JUJUTSU KAISEN</div>
+              <div class="mc-vol">Vol. 24</div>
+            </div>
+          </div>
+          <div class="manga-card mc3 reveal">
+            <div
+              class="manga-cover"
+              style="background: linear-gradient(135deg, #c94b4b, #4b134f)"
+            >
+              <div class="mc-deco">⚔️</div>
+              <div class="mc-title">DEMON SLAYER</div>
+              <div class="mc-vol">Vol. 23</div>
+            </div>
+          </div>
+          <div class="manga-card mc4 reveal">
+            <div
+              class="manga-cover"
+              style="background: linear-gradient(135deg, #11998e, #38ef7d)"
+            >
+              <div class="mc-deco">💥</div>
+              <div class="mc-title">MY HERO ACADEMIA</div>
+              <div class="mc-vol">Vol. 40</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-hint">
+        <span>Pastga suring</span>
+        <div class="scroll-arrow">↓</div>
+      </div>
+    </section>
+
+    <!-- PAGE 2: ABOUT -->
+    <section class="page page-light" id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag reveal">Biz haqimizda</div>
+          <h2 class="section-title reveal">
+            Manga sevuvchilar <span class="highlight">uchun</span>,<br />manga
+            sevuvchilar
+            <span class="highlight">tomonidan</span>
+          </h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-img reveal">
+            <div class="about-illustration">
+              <div class="ai-blob"></div>
+              <div class="ai-content">
+                <div class="ai-icon">📚</div>
+                <div class="ai-text">2019 yildan beri</div>
+                <div class="ai-line"></div>
+                <div class="ai-stat">6 yil tajriba</div>
+              </div>
+            </div>
+          </div>
+          <div class="about-text">
+            <div class="about-item reveal">
+              <div class="ab-icon">🎯</div>
+              <div>
+                <h3>Bizning missiya</h3>
+                <p>
+                  O'zbekistonda manga madaniyatini rivojlantirish va har bir
+                  manga muxlisiga sifatli kitoblarni qulay narxda taqdim etish.
+                </p>
+              </div>
+            </div>
+            <div class="about-item reveal">
+              <div class="ab-icon">🚀</div>
+              <div>
+                <h3>Nima uchun biz?</h3>
+                <p>
+                  Rasmiy litsenziyalangan kitoblar, tez yetkazib berish, va
+                  o'zbek tilidagi birinchi ixtisoslashgan manga do'koni.
+                </p>
+              </div>
+            </div>
+            <div class="about-item reveal">
+              <div class="ab-icon">❤️</div>
+              <div>
+                <h3>Jamoamiz</h3>
+                <p>
+                  Biz 20 nafar manga ishqibozi jamoasi bilan ishlaymiz. Har
+                  birimiz manga bo'yicha chuqur bilimga egamiz.
+                </p>
+              </div>
+            </div>
+            <div class="about-item reveal">
+              <div class="ab-icon">🏆</div>
+              <div>
+                <h3>Yutuqlarimiz</h3>
+                <p>
+                  2023 yilning eng yaxshi internet do'koni mukofoti. 15,000+
+                  mamnun mijoz va 500+ noyob sarlavha.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 3: FEATURES -->
+    <section class="page" id="features">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag reveal">Afzalliklarimiz</div>
+          <h2 class="section-title reveal">
+            Nima uchun <span class="highlight">MangaUZ</span>?
+          </h2>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card reveal">
+            <div class="fc-icon">🚚</div>
+            <h3>Tez Yetkazib Berish</h3>
+            <p>
+              Toshkent bo'ylab 24 soat, viloyatlarga 2–3 kun ichida yetkazib
+              beramiz.
+            </p>
+            <div class="fc-tag">Bepul · 150,000 so'mdan</div>
+          </div>
+          <div class="feature-card reveal">
+            <div class="fc-icon">✅</div>
+            <h3>100% Original</h3>
+            <p>
+              Faqat rasmiy nashriyotlardan litsenziyalangan, original va sifatli
+              kitoblar.
+            </p>
+            <div class="fc-tag">Kafolat beramiz</div>
+          </div>
+          <div class="feature-card reveal">
+            <div class="fc-icon">🌏</div>
+            <h3>O'zbek tilida</h3>
+            <p>
+              Ko'plab manga sarlavhalari O'zbek tilida mavjud — bu bizning
+              asosiy ustunligimiz.
+            </p>
+            <div class="fc-tag">300+ sarlavha UZ tilida</div>
+          </div>
+          <div class="feature-card reveal">
+            <div class="fc-icon">💳</div>
+            <h3>Qulay To'lov</h3>
+            <p>
+              Payme, Click, Uzcard, Humo, naqd pul — istalgan usulda to'lang.
+            </p>
+            <div class="fc-tag">6 ta to'lov usuli</div>
+          </div>
+          <div class="feature-card reveal">
+            <div class="fc-icon">🔄</div>
+            <h3>Qaytarish Kafolati</h3>
+            <p>
+              Kitob sifatidan norozi bo'lsangiz, 7 kun ichida qaytarib olamiz.
+            </p>
+            <div class="fc-tag">7 kunlik kafolat</div>
+          </div>
+          <div class="feature-card reveal">
+            <div class="fc-icon">🎁</div>
+            <h3>Sovg'alar & Aksiyalar</h3>
+            <p>
+              Doimiy mijozlar uchun maxsus chegirmalar va eksklyuziv manga
+              aksessuarlari.
+            </p>
+            <div class="fc-tag">Har hafta yangi aksiya</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 4: CATALOG / GENRES -->
+    <section class="page page-light" id="catalog">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag reveal">Katalog</div>
+          <h2 class="section-title reveal">
+            Barcha <span class="highlight">Janrlar</span>
+          </h2>
+          <p class="section-sub reveal">
+            👆 Janrga bosing — ichidagi kitoblarni ko'ring!
+          </p>
+        </div>
+        <div class="genres-grid" id="genresGrid"></div>
+      </div>
+    </section>
+
+    <!-- PAGE 5: STORE -->
+    <section class="page" id="store">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag reveal">Do'kon</div>
+          <h2 class="section-title reveal">
+            Barcha <span class="highlight">Kitoblar</span>
+          </h2>
+        </div>
+        <div class="store-filters reveal">
+          <button class="filter-btn active" data-filter="all">Barchasi</button>
+          <button class="filter-btn" data-filter="new">✨ Yangi</button>
+          <button class="filter-btn" data-filter="bestseller">
+            🔥 Bestseller
+          </button>
+          <button class="filter-btn" data-filter="sale">🏷️ Chegirma</button>
+          <button class="filter-btn" data-filter="uz">🇺🇿 O'zbekcha</button>
+        </div>
+        <div class="products-grid" id="productsGrid"></div>
+      </div>
+    </section>
+
+    <!-- PAGE 6: REVIEWS -->
+    <section class="page page-light" id="reviews">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag reveal">Fikrlar</div>
+          <h2 class="section-title reveal">
+            Mijozlarimiz <span class="highlight">nima deydi?</span>
+          </h2>
+        </div>
+        <div class="reviews-track-wrap">
+          <div class="reviews-track" id="reviewsTrack"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 7: CONTACT -->
+    <section class="page" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag reveal">Aloqa</div>
+          <h2 class="section-title reveal">
+            Biz bilan <span class="highlight">bog'laning</span>
+          </h2>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="ci-card reveal">
+              <div class="ci-icon">📍</div>
+              <div>
+                <h4>Manzil</h4>
+                <p>Toshkent sh., Yashnobod t., Olmos koch. 36</p>
+              </div>
+            </div>
+            <div class="ci-card reveal">
+              <div class="ci-icon">📞</div>
+              <div>
+                <h4>Telefon</h4>
+                <p>+998 77 728 8661</p>
+              </div>
+            </div>
+            <div class="ci-card reveal">
+              <div class="ci-icon">✉️</div>
+              <div>
+                <h4>Email</h4>
+                <p>info@mangauz.uz</p>
+              </div>
+            </div>
+            <div class="ci-card reveal">
+              <div class="ci-icon">🕐</div>
+              <div>
+                <h4>Ish vaqti</h4>
+                <p>Dush–Shan: 9:00–21:00</p>
+              </div>
+            </div>
+            <div class="social-links reveal">
+              <a href="#" class="social-btn">📱 Telegram</a>
+              <a href="#" class="social-btn">📸 Instagram</a>
+              <a href="#" class="social-btn">▶️ YouTube</a>
+            </div>
+          </div>
+          <div class="contact-form reveal">
+            <h3>Xabar yuboring</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="cf-name"
+                  placeholder="Ismingiz *"
+                  class="form-input"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="tel"
+                  id="cf-phone"
+                  placeholder="Telefon raqamingiz"
+                  class="form-input"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                id="cf-email"
+                placeholder="Email manzilingiz"
+                class="form-input"
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                id="cf-msg"
+                placeholder="Xabaringiz..."
+                class="form-input form-textarea"
+              ></textarea>
+            </div>
+            <button class="btn-primary btn-full" id="sendBtn">
+              Yuborish →
+            </button>
+            <div class="form-success" id="formSuccess">
+              ✅ Xabaringiz yuborildi! Tez orada javob beramiz.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 8: FOOTER -->
+    <footer class="footer" id="footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <span class="logo-jp">マンガ</span
+            ><span class="logo-uz">MangaUZ</span>
+          </div>
+          <p>
+            O'zbekistondagi eng katta manga do'koni. Sevimli manga
+            kitoblaringizni biz orqali toping!
+          </p>
+        </div>
+        <div class="footer-links">
+          <div class="fl-col">
+            <h4>Sahifalar</h4>
+            <a href="#home">Bosh sahifa</a><a href="#about">Biz haqimizda</a
+            ><a href="#catalog">Katalog</a><a href="#store">Do'kon</a>
+          </div>
+          <div class="fl-col">
+            <h4>Yordam</h4>
+            <a href="#contact">Aloqa</a><a href="#">FAQ</a
+            ><a href="#">Yetkazib berish</a><a href="#">Qaytarish</a>
+          </div>
+          <div class="fl-col">
+            <h4>Ijtimoiy</h4>
+            <a href="#">Telegram</a><a href="#">Instagram</a
+            ><a href="#">YouTube</a><a href="#">TikTok</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 MangaUZ. Barcha huquqlar himoyalangan.</p>
+        <p>❤️ Manga sevuvchilar uchun yaratildi</p>
+        <button class="admin-open-btn" id="adminOpenBtn">🔐 Admin</button>
+      </div>
+    </footer>
+
+    <!-- ===== CART PANEL ===== -->
+    <div class="cart-modal" id="cartModal">
+      <div class="cart-inner">
+        <div class="cart-header">
+          <h3>🛒 Savatcha</h3>
+          <button class="cart-close" id="cartClose">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+          <div class="cart-empty">
+            🛒 Savatcha bo'sh<br /><small>Mahsulot qo'shing!</small>
+          </div>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display: none">
+          <div class="cart-total">Jami: <span id="cartTotal">0</span> so'm</div>
+          <button class="btn-primary btn-full" id="checkoutBtn">
+            📦 Buyurtma berish
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- ===== GENRE MODAL ===== -->
+    <div class="modal-overlay" id="genreOverlay"></div>
+    <div class="genre-modal" id="genreModal">
+      <div class="gm-header">
+        <div class="gm-title-wrap">
+          <span id="gmIcon"></span>
+          <h2 id="gmTitle"></h2>
+        </div>
+        <button class="modal-close" id="genreClose">✕</button>
+      </div>
+      <p id="gmDesc" class="gm-desc"></p>
+      <div class="gm-products" id="gmProducts"></div>
+    </div>
+
+    <!-- ===== ORDER MODAL ===== -->
+    <div class="modal-overlay" id="orderOverlay"></div>
+    <div class="order-modal" id="orderModal">
+      <div class="om-header">
+        <h2>📦 Buyurtma berish</h2>
+        <button class="modal-close" id="orderClose">✕</button>
+      </div>
+      <div class="om-scroll">
+        <div class="om-items" id="omItems"></div>
+        <div class="om-total">
+          Umumiy summa: <strong><span id="omTotal"></span> so'm</strong>
+        </div>
+        <div class="om-form">
+          <h3>📋 Ma'lumotlaringizni kiriting</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <input
+                type="text"
+                id="om-name"
+                placeholder="To'liq ismingiz *"
+                class="form-input"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="tel"
+                id="om-phone"
+                placeholder="+998 XX XXX XX XX *"
+                class="form-input"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              id="om-address"
+              placeholder="Yetkazib berish manzili *"
+              class="form-input"
+            />
+          </div>
+          <h3>💳 To'lov usuli</h3>
+          <div class="payment-methods">
+            <label class="pay-opt"
+              ><input type="radio" name="pay" value="payme" checked /><span
+                >💚 Payme</span
+              ></label
+            >
+            <label class="pay-opt"
+              ><input type="radio" name="pay" value="click" /><span
+                >🔵 Click</span
+              ></label
+            >
+            <label class="pay-opt"
+              ><input type="radio" name="pay" value="uzcard" /><span
+                >🟠 Uzcard</span
+              ></label
+            >
+            <label class="pay-opt"
+              ><input type="radio" name="pay" value="humo" /><span
+                >🟣 Humo</span
+              ></label
+            >
+            <label class="pay-opt"
+              ><input type="radio" name="pay" value="cash" /><span
+                >💵 Naqd pul</span
+              ></label
+            >
+            <label class="pay-opt"
+              ><input type="radio" name="pay" value="crypto" /><span
+                >🪙 Crypto</span
+              ></label
+            >
+          </div>
+          <button
+            class="btn-primary btn-full"
+            id="confirmOrderBtn"
+            style="margin-top: 1.5rem"
+          >
+            ✅ Buyurtmani tasdiqlash
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SUCCESS MODAL ===== -->
+    <div class="modal-overlay" id="successOverlay"></div>
+    <div class="success-modal" id="successModal">
+      <div class="sm-confetti" id="smConfetti"></div>
+      <div class="sm-icon">🎉</div>
+      <h2>Buyurtma qabul qilindi!</h2>
+      <p>
+        Rahmat! Operatorimiz <strong>30 daqiqa</strong> ichida siz bilan
+        bog'lanadi va yetkazib berish vaqtini tasdiqlaydi.
+      </p>
+      <div class="sm-order-id">
+        Buyurtma №: <strong id="smOrderId"></strong>
+      </div>
+      <button class="btn-primary" id="smCloseBtn">🏠 Davom etish</button>
+    </div>
+
+    <!-- ADMIN PANEL -->
+    <div class="modal-overlay" id="adminOverlay"></div>
+    <div class="admin-panel" id="adminPanel">
+      <div class="admin-header">
+        <div class="admin-title">
+          <span>🔐</span>
+          <div>
+            <h2>Admin Panel</h2>
+            <small>MangaUZ buyurtmalar boshqaruvi</small>
+          </div>
+        </div>
+        <div style="display: flex; gap: 0.7rem; align-items: center">
+          <button class="btn-danger" id="adminClearBtn">
+            🗑️ Barchasini ochir</button
+          ><button class="modal-close" id="adminClose">✕</button>
+        </div>
+      </div>
+      <div class="admin-stats">
+        <div class="as-card">
+          <div class="as-num" id="aStatAll">0</div>
+          <div class="as-lbl">Jami buyurtma</div>
+        </div>
+        <div class="as-card pending">
+          <div class="as-num" id="aStatPending">0</div>
+          <div class="as-lbl">⏳ Kutilmoqda</div>
+        </div>
+        <div class="as-card confirmed">
+          <div class="as-num" id="aStatConfirmed">0</div>
+          <div class="as-lbl">✅ Tasdiqlandi</div>
+        </div>
+        <div class="as-card delivered">
+          <div class="as-num" id="aStatDelivered">0</div>
+          <div class="as-lbl">📦 Yetkazildi</div>
+        </div>
+        <div class="as-card revenue">
+          <div class="as-num" id="aStatRevenue">0</div>
+          <div class="as-lbl">💰 Umumiy (som)</div>
+        </div>
+      </div>
+      <div class="admin-filters">
+        <button class="admin-filter active" data-status="all">Barchasi</button>
+        <button class="admin-filter" data-status="pending">
+          ⏳ Kutilmoqda
+        </button>
+        <button class="admin-filter" data-status="confirmed">
+          🟢 Tasdiqlandi
+        </button>
+        <button class="admin-filter" data-status="delivered">
+          ✅ Yetkazildi
+        </button>
+      </div>
+      <div class="admin-orders-list" id="adminOrdersList">
+        <div class="admin-empty">📭 Hozircha buyurtma yoq</div>
+      </div>
+    </div>
+    <div class="toast" id="toast"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
